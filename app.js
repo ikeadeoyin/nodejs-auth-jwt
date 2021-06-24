@@ -5,7 +5,10 @@ const authRoutes = require("./routes/authRoutes");
 const cookieParser = require("cookie-parser");
 const {requireAuth, checkUser} = require("./Middleware/authMiddleware");
 
+const port = process.env.PORT || 4000;
+
 const app = express();
+
 
 // middleware
 app.use(express.static('public'));
